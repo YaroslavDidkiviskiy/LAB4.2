@@ -1,0 +1,153 @@
+/* Базові стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff9900;
+}
+
+.cart a {
+  background-color: #ff9900;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.product {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product img {
+  width: 100%;
+  height: 200px; /* Встановлюємо однакову висоту */
+  object-fit: cover; /* Забезпечуємо, щоб зображення не деформувалось */
+  border-radius: 5px;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.product p {
+  margin-bottom: 1rem;
+}
+
+.product button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #555;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* ====== Media Queries для адаптивності ====== */
+
+/* Для планшетів */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Для мобільних телефонів */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .cart {
+    margin-top: 0.5rem;
+  }
+  .products {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Додані стилі для зображення зверху зліва */
+.top-image {
+  width: 100%;
+  text-align: left; /* Вирівнюємо зображення ліворуч */
+  margin-top: 1rem; /* Відступ знизу від верхнього краю */
+}
+
+.top-image img {
+  width: auto;
+  height: 200px; /* Встановлюємо висоту, щоб не було занадто велике */
+  max-width: 100%; /* Обмежуємо максимальну ширину */
+  object-fit: cover; /* Забезпечуємо, щоб зображення не деформувалось */
+}
